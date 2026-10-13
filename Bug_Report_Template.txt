@@ -29,5 +29,5 @@ Observed result: Rate: ₹7/unit | Base: ₹1750 | Surcharge: ₹0 | Fixed: ₹5
 Mobile layout checked (Yes/No): Yes 
 
 GIT VERSION CONTROL
-git log -1 --oneline output: <paste after committing>
-GitHub URL (if available): <optional>
+git log -1 --oneline output: 9e6acba (HEAD -> master) Fix bugs and complete electricity bill estimator
+GitHub URL (if available): https://github.com/namrapatel4599-max/Electricity-bill-estimator.
