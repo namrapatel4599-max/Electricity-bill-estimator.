@@ -1,0 +1,33 @@
+ITUS102 - PRACTICAL EXAMINATION | DEBUGGING AND IMPLEMENTATION REPORT
+Date: 13-10-2026 | Task 01 - Electricity Consumption Bill Estimator
+
+Enrollment No.: 26CE066
+Name: Namra Patel
+
+SIMPLE BUGS (write a brief explanation for each)
+S1 | Original: href="#calcuator" (typo) | Correction: href="#calculator" | Why: Link target must match section id="calculator" or it won't scroll.
+S2 | Original: footer was a generic <div class="site-footer"> | Correction: changed to <footer class="site-footer"> | Why: Semantic HTML5 element for site information; better accessibility/SEO.
+S3 | Original: background-color #f1f6f9; (missing colon) | Correction: background-color: #f1f6f9; | Why: Without the colon the declaration is invalid CSS and ignored.
+S4 | Original: .pageTitle (class selector) | Correction: #pageTitle (ID selector) | Why: The h1 has id="pageTitle", not a class, so the rule never matched.
+S5 | Original: Number(units) + 1 | Correction: removed "+ 1" | Why: It billed one extra unit, giving wrong base amount.
+S6 | Original: fixedCharge = 500 | Correction: fixedCharge = 50 | Why: Policy fixed charge is Rs.50.
+
+CODE COMPLETION / IMPLEMENTATION (briefly state what was completed)
+M1: Added <meta charset="UTF-8"> and viewport meta (width=device-width, initial-scale=1.0) in <head>.
+M2: Added <aside class="notice"> with <h2>Important Note</h2> and a sentence about checking input values.
+M3: .nav-links { display:flex; justify-content:space-between; }
+M4: .cards { display:grid; grid-template-columns: 1fr 1fr; }
+M5: @media (max-width:600px): .cards single column (1fr); .nav-links flex-direction: column.
+M6: calculateSurcharge returns amount * percentage / 100.
+D1: chooseRate uses if / else if / else: <=100 -> 5, <=300 -> 7, else 9.
+D2: calculateBase returns units * rate.
+D3: buildExamples uses a for loop (100..500 step 100) with chooseRate() and calculateBase() to list base bills.
+
+FUNCTIONAL TEST
+Test input: 250 units, Domestic
+Observed result: Rate: ₹7/unit | Base: ₹1750 | Surcharge: ₹0 | Fixed: ₹50 | Total: ₹1800. Examples: 100=500, 200=1400, 300=2100, 400=3600, 500=4500.
+Mobile layout checked (Yes/No): Yes 
+
+GIT VERSION CONTROL
+git log -1 --oneline output: <paste after committing>
+GitHub URL (if available): <optional>
